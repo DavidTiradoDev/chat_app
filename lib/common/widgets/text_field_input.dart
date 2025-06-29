@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:chat_app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 

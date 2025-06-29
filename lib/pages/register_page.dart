@@ -52,52 +52,49 @@ class _FormState extends State<_Form> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return Container(
-      child: Column(
-        children: [
-          TextFieldInput(
-            autoCorrect: false,
-            keyboardType: TextInputType.emailAddress,
-            obscureText: false,
-            icons: Icons.supervised_user_circle,
-            hintText: 'Nombre/s',
-            textEditingController: nameController,
-          ),
-          TextFieldInput(
-            autoCorrect: false,
-            keyboardType: TextInputType.emailAddress,
-            obscureText: false,
-            icons: Icons.supervised_user_circle,
-            hintText: 'Apellidos',
-            textEditingController: surnameController,
-          ),
-          TextFieldInput(
-            autoCorrect: false,
-            keyboardType: TextInputType.emailAddress,
-            obscureText: false,
-            icons: Icons.mail_outline,
-            hintText: 'Correo',
-            textEditingController: emailController,
-          ),
-          TextFieldInput(
-            autoCorrect: false,
-            keyboardType: TextInputType.emailAddress,
-            obscureText: true,
-            icons: Icons.mail_outline,
-            hintText: 'Contraseña',
-            textEditingController: passwordController,
-          ),
-          SizedBox(height: 10),
-          BlueButton(
-            title: 'Ingresar',
-            onTap: () {
-              debugPrint('El correo es: ${emailController.text}');
-              debugPrint('La contraseña es: ${passwordController.text}');
-            },
-          ),
-        ],
-      ),
+    return Column(
+      children: [
+        TextFieldInput(
+          autoCorrect: false,
+          keyboardType: TextInputType.emailAddress,
+          obscureText: false,
+          icons: Icons.supervised_user_circle,
+          hintText: 'Nombre/s',
+          textEditingController: nameController,
+        ),
+        TextFieldInput(
+          autoCorrect: false,
+          keyboardType: TextInputType.emailAddress,
+          obscureText: false,
+          icons: Icons.supervised_user_circle,
+          hintText: 'Apellidos',
+          textEditingController: surnameController,
+        ),
+        TextFieldInput(
+          autoCorrect: false,
+          keyboardType: TextInputType.emailAddress,
+          obscureText: false,
+          icons: Icons.mail_outline,
+          hintText: 'Correo',
+          textEditingController: emailController,
+        ),
+        TextFieldInput(
+          autoCorrect: false,
+          keyboardType: TextInputType.emailAddress,
+          obscureText: true,
+          icons: Icons.mail_outline,
+          hintText: 'Contraseña',
+          textEditingController: passwordController,
+        ),
+        SizedBox(height: 10),
+        BlueButton(
+          title: 'Ingresar',
+          onTap: () {
+            debugPrint('El correo es: ${emailController.text}');
+            debugPrint('La contraseña es: ${passwordController.text}');
+          },
+        ),
+      ],
     );
   }
 }
